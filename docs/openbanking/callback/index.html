@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="no-referrer">
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'none'; script-src 'self'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'; object-src 'none'">
+    <title>Financial Dashboard — Autorizzazione bancaria</title>
+    <style>
+        :root {
+            color-scheme: light dark;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        body {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            min-height: 100vh;
+            padding: 1.5rem;
+        }
+
+        [role="main"] {
+            max-width: 32rem;
+            text-align: center;
+        }
+
+        a {
+            background: #0a66c2;
+            border-radius: 0.75rem;
+            color: #fff;
+            display: inline-block;
+            font-weight: 600;
+            margin-top: 1rem;
+            padding: 0.8rem 1.1rem;
+            text-decoration: none;
+        }
+
+        a:focus-visible {
+            outline: 3px solid currentColor;
+            outline-offset: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div role="main">
+        <h1>Financial Dashboard</h1>
+        <p id="callback-status" role="status" aria-live="polite">
+            Verifica del risultato dell’autorizzazione…
+        </p>
+        <a id="return-to-app" hidden>
+            Torna all’app
+        </a>
+        <noscript>
+            JavaScript è necessario per restituire in sicurezza il risultato all’app.
+            Chiudi questa pagina e riprova dopo averlo abilitato.
+        </noscript>
+    </div>
+    <script src="callback-bridge.js" referrerpolicy="no-referrer"></script>
+</body>
+</html>
